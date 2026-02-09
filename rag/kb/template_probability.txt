@@ -1,0 +1,11 @@
+# Solution template: Probability problems
+
+1. Define sample space S and (if applicable) event(s) A, B, ...
+2. Decide: equally likely outcomes (count favorable/total) or given probabilities (use rules).
+3. For P(A∪B): use P(A)+P(B)-P(A∩B). If mutually exclusive, P(A∩B)=0.
+4. For P(A|B): use P(A|B) = P(A∩B)/P(B). Find P(A∩B) and P(B) from problem or tree.
+5. For independence: check P(A∩B) = P(A)P(B). Do not assume independence unless stated.
+6. For "at least one": P(at least one) = 1 - P(none).
+7. For Bayes: identify hypothesis A and evidence B; compute P(B|A), P(A), P(B) [often as P(B|A)P(A)+P(B|A')P(A')]; then P(A|B) = P(B|A)P(A)/P(B).
+8. For expectation/variance: list values and probabilities; E[X]=Σ x·P(X=x); Var(X)=E[X^2]-(E[X])^2. For binomial, E=np, Var=np(1-p).
+9. Final answer: probability as fraction or decimal in [0,1]. State "P(...) = ...".

@@ -1,0 +1,44 @@
+# Probability (JEE-style scope)
+
+## Definitions
+Sample space S: set of all outcomes. Event A ⊆ S.
+P(A) = (number of favorable outcomes) / (total outcomes) for equally likely outcomes
+0 ≤ P(A) ≤ 1; P(S) = 1; P(A') = 1 - P(A)
+
+## Addition rule
+P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
+For mutually exclusive events: P(A ∪ B) = P(A) + P(B)
+
+## Conditional probability
+P(A|B) = P(A ∩ B) / P(B), P(B) > 0
+P(A ∩ B) = P(B) * P(A|B) = P(A) * P(B|A)
+
+## Independence
+A and B independent iff P(A ∩ B) = P(A) * P(B), equivalently P(A|B) = P(A)
+
+## Bayes' theorem
+P(A|B) = P(B|A) * P(A) / P(B)
+P(B) = P(B|A)P(A) + P(B|A')P(A') when partitioning by A, A'
+
+## Random variables (discrete)
+X takes values x_i with P(X=x_i). 
+Expected value: E[X] = Σ x_i * P(X=x_i)
+Variance: Var(X) = E[X^2] - (E[X])^2 = Σ (x_i - μ)^2 P(X=x_i)
+E[aX+b] = a*E[X]+b; Var(aX+b) = a^2 Var(X)
+
+## Binomial distribution
+n trials, success probability p, X = number of successes
+P(X=k) = C(n,k) p^k (1-p)^(n-k)
+E[X] = np, Var(X) = np(1-p)
+
+## Common problem types
+- Two dice / cards: count favorable and total outcomes
+- With replacement vs without: independence vs conditional
+- At least one: use 1 - P(none)
+- Bayes: given result, find probability of cause
+
+## Requirements for problems
+- Compute P(A), P(A∪B), P(A|B); check independence
+- Use Bayes for reverse conditional probability
+- Find E[X] and Var(X) for given distribution or binomial
+- Set up and solve word problems (balls, dice, cards, reliability)

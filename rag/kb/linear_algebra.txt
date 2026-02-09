@@ -1,0 +1,47 @@
+# Linear Algebra Basics (JEE-style scope)
+
+## Vectors (2D/3D)
+Magnitude: |a| = sqrt(a_1^2 + a_2^2) or sqrt(a_1^2 + a_2^2 + a_3^2)
+Unit vector: â = a / |a|
+Addition: a + b = (a_1+b_1, a_2+b_2, ...); scalar multiplication: k*a = (k*a_1, ...)
+
+## Dot product
+a · b = a_1*b_1 + a_2*b_2 (+ a_3*b_3 in 3D)
+a · b = |a||b| cos θ, where θ is angle between a and b
+a ⊥ b iff a · b = 0
+Projection of a on b: (a·b / |b|^2) * b
+
+## Cross product (3D only)
+a × b = vector perpendicular to both; |a × b| = |a||b| sin θ
+i×j=k, j×k=i, k×i=j; j×i=-k, etc.
+a × b = - (b × a)
+Component form: (a_2*b_3 - a_3*b_2, a_3*b_1 - a_1*b_3, a_1*b_2 - a_2*b_1)
+
+## Matrices
+Order m×n: m rows, n columns. Entry a_ij.
+Addition/subtraction: same order; entrywise.
+Scalar multiplication: each entry multiplied by k.
+Matrix multiplication: (AB)_ij = Σ_k A_ik B_kj; A(m×p)*B(p×n) gives m×n. Not commutative.
+
+## Determinants
+2×2: |a b; c d| = ad - bc
+3×3: expand by row or column; e.g. a_11*(cofactor) - a_12*(cofactor) + a_13*(cofactor)
+|A|=0 => singular (non-invertible); |A|≠0 => invertible
+
+## Inverse of matrix
+For 2×2: A = [a b; c d], A^(-1) = (1/(ad-bc)) [d -b; -c a]
+A A^(-1) = A^(-1) A = I (identity)
+
+## System of linear equations
+Ax = b. If A square and |A|≠0: unique solution x = A^(-1) b.
+Consistent vs inconsistent; unique vs infinitely many (use rank or row reduction conceptually).
+
+## Rank (basic)
+Rank = number of linearly independent rows (or columns).
+For 2×2: rank 2 iff det≠0; rank 1 iff one row/col is multiple of other; rank 0 iff zero matrix.
+
+## Requirements for problems
+- Compute dot product, angle, projection; check perpendicular
+- Compute cross product; area of parallelogram = |a × b|; scalar triple product for volume
+- Multiply matrices; find determinant and inverse of 2×2 or 3×3
+- Solve 2×2 or 3×3 system using inverse or substitution

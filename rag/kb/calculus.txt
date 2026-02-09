@@ -1,0 +1,47 @@
+# Basic Calculus (JEE-style): Limits, Derivatives, Optimization
+
+## Limits
+lim_{x→a} f(x) exists and equals L if left and right limits exist and equal L.
+Limit laws: limit of sum, product, quotient (denominator ≠ 0) is sum, product, quotient of limits.
+
+## Standard limits
+lim_{x→0} sin(x)/x = 1
+lim_{x→0} (1+x)^(1/x) = e
+lim_{x→0} (e^x - 1)/x = 1
+lim_{x→0} (a^x - 1)/x = ln(a)
+lim_{x→∞} (1 + 1/x)^x = e
+
+## Indeterminate forms and L'Hôpital
+0/0 or ∞/∞: if lim f(x)/g(x) indeterminate, then lim f(x)/g(x) = lim f'(x)/g'(x) (when right side exists or is ±∞).
+Apply repeatedly if needed.
+
+## Derivatives (definition and rules)
+f'(x) = lim_{h→0} (f(x+h) - f(x))/h
+(x^n)' = n*x^(n-1), n real (for x>0 when n not integer)
+(sin x)' = cos x; (cos x)' = -sin x; (tan x)' = sec^2 x
+(e^x)' = e^x; (a^x)' = a^x ln(a); (ln x)' = 1/x, x>0
+Product rule: (uv)' = u'v + uv'
+Quotient rule: (u/v)' = (u'v - uv')/v^2
+Chain rule: (f(g(x)))' = f'(g(x)) * g'(x)
+
+## Second derivative and concavity
+f''(x) > 0 => concave up; f''(x) < 0 => concave down; f''(c)=0 may be inflection point.
+
+## Optimization (single variable)
+Critical points: solve f'(x) = 0 (or f' undefined).
+First derivative test: sign change of f' from + to - => local max; - to + => local min.
+Second derivative test: f'(c)=0 and f''(c)<0 => local max; f''(c)>0 => local min.
+Endpoint check on closed interval [a,b]: compare f(a), f(b), and f at critical points in (a,b).
+
+## Basic integrals (antiderivatives)
+∫ x^n dx = x^(n+1)/(n+1) + C, n ≠ -1
+∫ 1/x dx = ln|x| + C
+∫ e^x dx = e^x + C
+∫ sin x dx = -cos x + C; ∫ cos x dx = sin x + C
+∫ sec^2 x dx = tan x + C
+
+## Requirements for problems
+- Evaluate limits using standard limits, algebra, or L'Hôpital
+- Differentiate using rules and chain rule; find tangent slope or equation
+- Find critical points and classify max/min; solve simple optimization (area, cost, etc.)
+- Compute indefinite integrals of polynomials, trig, exponential

@@ -1,0 +1,21 @@
+# Math scope (JEE-style; not olympiad)
+
+## Topics and doc files
+- Algebra     → algebra.txt
+- Probability → probability.txt
+- Calculus    → calculus.txt (limits, derivatives, simple optimization)
+- Linear algebra basics → linear_algebra.txt
+
+## What is in scope
+- Algebra: identities, quadratics, AP/GP, binomial (basic), logs, AM-GM (2 numbers), remainder/factor theorem
+- Probability: definitions, addition rule, conditional, independence, Bayes, expectation, variance, binomial distribution
+- Calculus: standard limits, L'Hôpital, derivative rules, chain rule, critical points, 1st/2nd derivative test, basic integrals
+- Linear algebra: vectors (dot, cross, projection), 2×2 and 3×3 matrices, determinant, inverse, solving linear systems, rank (basic)
+
+## What is out of scope
+- Olympiad-level inequalities, number theory, combinatorics
+- Multivariable calculus, series convergence tests, heavy integration techniques
+- Abstract linear algebra (eigenvalues, diagonalisation, vector spaces)
+- Continuous distributions (normal, etc.) beyond basic mention
+
+Use the four topic files for formulas and problem requirements.

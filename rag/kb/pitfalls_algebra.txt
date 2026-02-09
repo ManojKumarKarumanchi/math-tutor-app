@@ -1,0 +1,19 @@
+# Common mistakes & pitfalls: Algebra
+
+(a+b)^2 ≠ a^2 + b^2. Correct: a^2 + 2ab + b^2.
+(a-b)^2 ≠ a^2 - b^2. Correct: a^2 - 2ab + b^2.
+sqrt(a^2 + b^2) ≠ a + b. No simplification; leave as sqrt(a^2+b^2) or simplify only when specific values given.
+
+Quadratic formula: denominator is 2a, not 2. Write x = (-b ± sqrt(b^2-4ac)) / (2a). Sign errors: -b, not b; 4ac under the square root.
+
+Dividing both sides by a variable: you may lose the root x=0. Either factor and use zero-product property, or treat x=0 separately.
+
+Extraneous roots: after solving an equation involving fractions, sqrt, or log, substitute back and discard roots that make a denominator zero or sqrt/log argument invalid.
+
+Logarithms: log(a+b) ≠ log a + log b. log(a+b) has no simple expansion. Only log(ab)=log a+log b, log(a/b)=log a-log b, log a^n=n log a.
+
+AM-GM: applies only to non-negative numbers. Equality when a=b. Do not apply to negative numbers.
+
+AP/GP: In GP, common ratio r can be negative (alternating). Sum to infinity only when |r| < 1. For r=1, S_n = n·a, not a(1-r^n)/(1-r).
+
+Binomial: C(n,k) = n!/(k!(n-k)!). Common error: forgetting that (a+b)^n has (n+1) terms from k=0 to n.

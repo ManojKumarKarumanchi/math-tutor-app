@@ -1,0 +1,17 @@
+# Common mistakes & pitfalls: Linear algebra
+
+Dot product a·b is a scalar, not a vector. a·b = a_1*b_1 + a_2*b_2 (+ a_3*b_3 in 3D). Do not confuse with cross product.
+
+Cross product a×b is a vector (only in 3D). Order matters: a×b = -(b×a). Right-hand rule: i×j = k. |a×b| = |a||b|sin θ gives area of parallelogram.
+
+Matrix multiplication: AB ≠ BA in general. Sizes: (m×p)(p×n) = m×n. Entry (AB)_ij = row i of A dot column j of B. Do not multiply entrywise.
+
+Determinant: 2×2 is ad - bc (not ad + bc). For 3×3, use expansion carefully; watch signs of cofactors (+,-,+ for first row).
+
+Inverse: A^(-1) exists only when det A ≠ 0. Formula for 2×2: A^(-1) = (1/(ad-bc))[d -b; -c a]. Check A·A^(-1) = I.
+
+Solving Ax = b: x = A^(-1)b only when A is square and invertible. Do not forget to multiply b by A^(-1) in correct order (A^(-1) on left of b).
+
+Projection: projection of a onto b is (a·b/|b|^2)·b, a vector. Scalar projection is a·b/|b|.
+
+Units: dot product of two vectors with same units gives scalar with product of units (e.g. force·displacement = work). Cross product gives vector with product of units; interpret as area or torque etc. as per context.

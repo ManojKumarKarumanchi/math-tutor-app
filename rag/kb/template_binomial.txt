@@ -1,0 +1,8 @@
+# Solution template: Binomial expansion and coefficients
+
+1. Identify (a + b)^n. Write general term: T_{k+1} = C(n,k) a^(n-k) b^k, k = 0,1,...,n.
+2. For "coefficient of x^r" in (ax^p + bx^q)^n: set exponent of x from general term equal to r, solve for k. Coefficient = C(n,k) × (coefficient of x in that term). Do not forget the power on a and b.
+3. For "term independent of x": set exponent of x to 0, find k, then compute that term.
+4. For "middle term(s)": if n even, one middle term at k = n/2; if n odd, two middle terms at k = (n-1)/2 and (n+1)/2.
+5. Sums: C(n,0)+C(n,1)+...+C(n,n) = 2^n. C(n,0)-C(n,1)+... = 0. Use expansion and substitute x=1 or x=-1 as needed.
+6. C(n,k) = n!/(k!(n-k)!). Keep factorials or simplify as required by problem.

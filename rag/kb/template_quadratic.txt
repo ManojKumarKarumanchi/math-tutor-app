@@ -1,0 +1,11 @@
+# Solution template: Quadratic equation ax^2 + bx + c = 0
+
+1. Ensure form: ax^2 + bx + c = 0, a ≠ 0. If not, rearrange (expand, bring all terms to one side).
+2. Identify a, b, c.
+3. Discriminant: D = b^2 - 4ac.
+   - D > 0: two distinct real roots. x = (-b ± sqrt(D)) / (2a).
+   - D = 0: one real root (repeated). x = -b / (2a).
+   - D < 0: no real roots (state "no real roots" or "complex roots" per context).
+4. If using quadratic formula: x = (-b + sqrt(D))/(2a) and x = (-b - sqrt(D))/(2a). Simplify.
+5. If equation came from a rational or applied problem: check no root makes a denominator zero or violates domain (e.g. sqrt, log). Reject such roots.
+6. Optional: verify sum of roots = -b/a, product = c/a.

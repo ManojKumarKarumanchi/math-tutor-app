@@ -1,0 +1,58 @@
+# Algebra (JEE-style scope)
+
+## Identities
+(a+b)^2 = a^2 + 2ab + b^2
+(a-b)^2 = a^2 - 2ab + b^2
+a^2 - b^2 = (a-b)(a+b)
+(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
+(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3
+a^3 + b^3 = (a+b)(a^2 - ab + b^2)
+a^3 - b^3 = (a-b)(a^2 + ab + b^2)
+(a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab+bc+ca)
+
+## Quadratic equations
+Standard form: ax^2 + bx + c = 0, a ≠ 0
+Quadratic formula: x = (-b ± sqrt(b^2 - 4ac)) / (2a)
+Discriminant D = b^2 - 4ac: D>0 two distinct real roots, D=0 repeated root, D<0 no real roots
+Sum of roots = -b/a, Product of roots = c/a
+Completing the square: ax^2 + bx + c = a(x + b/(2a))^2 - (b^2-4ac)/(4a)
+
+## Progressions
+Arithmetic progression (AP): nth term T_n = a + (n-1)d; sum S_n = n/2 * (2a + (n-1)d) = n/2 * (first + last)
+Geometric progression (GP): nth term T_n = a*r^(n-1); sum S_n = a(1-r^n)/(1-r) for r≠1; infinite sum a/(1-r) when |r|<1
+
+## Binomial theorem (basic)
+(a+b)^n = Σ C(n,k) a^(n-k) b^k for k=0 to n
+C(n,k) = n! / (k!(n-k)!)
+C(n,0)+C(n,1)+...+C(n,n) = 2^n
+C(n,0)-C(n,1)+...+(-1)^n C(n,n) = 0
+
+## Logarithms
+log_a(xy) = log_a x + log_a y
+log_a(x/y) = log_a x - log_a y
+log_a x^n = n log_a x
+log_a b = log_c b / log_c a (change of base)
+log_a a = 1, log_a 1 = 0
+a^(log_a x) = x
+
+## Inequalities (basics)
+AM ≥ GM for non-negative reals: (a+b)/2 ≥ sqrt(ab), equality when a=b
+|x| < a iff -a < x < a
+|x| > a iff x < -a or x > a
+
+## Polynomials
+Remainder theorem: P(x) divided by (x-a) gives remainder P(a)
+Factor theorem: (x-a) is factor of P(x) iff P(a)=0
+Factorisation: factorise by finding roots or grouping.
+
+## Equations and systems
+Linear in one variable: ax + b = 0 => x = -b/a
+Linear in two variables: pair of equations; solve by substitution or elimination.
+Rational equations: clear denominators, then solve; check for extraneous roots (denominator zero).
+
+## Requirements for problems
+- Solve quadratic by formula, completing square, or factorisation
+- Find AP/GP term or sum given first term and common difference/ratio
+- Expand (a+b)^n for small n or find specific coefficient
+- Simplify using log rules and identities
+- Apply AM-GM for two numbers; solve |f(x)| < k type inequalities

@@ -1,0 +1,11 @@
+# Solution template: Evaluating limits
+
+1. Identify: lim_{x→a} f(x) or lim_{x→∞} f(x). Substitute x = a (or consider behavior as x→∞).
+2. If substitution gives a finite value (no 0/0, ∞/∞, 0·∞): that is the limit.
+3. If 0/0 or ∞/∞: try (in order)
+   - algebraic simplification (factor, cancel, rationalize);
+   - standard limits: sin x/x → 1, (1+1/x)^x → e, (e^x-1)/x → 1, etc.;
+   - L'Hôpital: lim f(x)/g(x) = lim f'(x)/g'(x) if f,g→0 or both→∞. Repeat if needed.
+4. If form is 0·∞: rewrite as 0/0 or ∞/∞ (e.g. f·g = f/(1/g)) then use L'Hôpital or standard limits.
+5. One-sided limits: lim_{x→a+} and lim_{x→a-}. Limit exists iff both exist and are equal.
+6. State: "lim_{x→a} f(x) = L" and box final value. If limit does not exist, say so and briefly why.

@@ -1,0 +1,17 @@
+# Common mistakes & pitfalls: Probability
+
+Do not assume independence unless stated. P(A∩B) = P(A)P(B) only when A and B are independent. Otherwise use P(A∩B) = P(A|B)P(B) or P(B|A)P(A).
+
+P(A|B) vs P(B|A): P(A|B) = P(A∩B)/P(B). These are different; Bayes' theorem swaps them. Read "given" carefully: "probability of A given B" is P(A|B).
+
+P(A∪B) = P(A)+P(B)-P(A∩B). Do not use P(A)+P(B) unless events are mutually exclusive (P(A∩B)=0).
+
+"At least one": P(at least one) = 1 - P(none). Do not multiply probabilities for "at least one" as if independent without care; 1-P(none) is correct when "none" is the complement.
+
+Probabilities must be in [0,1]. If you get >1 or <0, recheck. Sum of probabilities of all outcomes in sample space = 1.
+
+With vs without replacement: drawing without replacement changes subsequent probabilities (conditional). Drawing with replacement keeps same probability each time (independent).
+
+Expected value: E[X] = Σ x·P(X=x). Not the same as "most likely value". Variance: Var(X) = E[X^2] - (E[X])^2; do not use E[(X-μ)^2] wrongly (same formula but easy to miscalculate E[X^2]).
+
+Binomial: n must be number of trials, p same each trial, trials independent. P(X=k) = C(n,k)p^k(1-p)^(n-k). k from 0 to n.

@@ -1,0 +1,10 @@
+# Solution template: System of linear equations (2×2 or 3×3)
+
+1. Write system in form Ax = b (matrix A, unknown vector x, constant vector b).
+2. For 2×2: either
+   - Substitution: solve one equation for one variable, substitute into the other, then back-substitute; or
+   - Inverse: if A = [a b; c d], det A = ad-bc. If det A ≠ 0, A^(-1) = (1/(ad-bc))[d -b; -c a]; then x = A^(-1) b.
+3. For 3×3: use substitution (solve one eq for one variable, substitute into other two, then solve 2×2) or matrix inverse if available.
+4. Consistency: if during elimination you get 0 = non-zero, system is inconsistent (no solution). If you get 0=0 and fewer equations than unknowns, infinitely many solutions (parametrize).
+5. Check: substitute solution(s) into original equations.
+6. State: "Solution: x = ..., y = ..." or "No solution" / "Infinitely many solutions: ...".

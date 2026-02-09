@@ -1,0 +1,206 @@
+
+# **1. Algebra**
+
+### **Q1. Solve the system of equations**
+
+Solve for (x,y):
+
+[
+\begin{cases}
+x+2y=5\
+3x+4y=11
+\end{cases}
+]
+
+**Solution:**
+
+Using matrix inverse / elimination:
+
+[
+\begin{aligned}
+&3x+4y=11,\
+&\text{Multiply first eqn by 3: }3x+6y=15,\
+&\text{Subtract: }(3x+6y)-(3x+4y)=15-11\Rightarrow 2y=4\Rightarrow y=2,\
+&x+2(2)=5\Rightarrow x+4=5\Rightarrow x=1.
+\end{aligned}
+]
+
+**Answer:** (\boxed{x=1,\ y=2}) ([SATHEE][1])
+
+---
+
+### **Q2. Determinant of a 3×3 matrix**
+
+Find the determinant:
+
+[
+A=\begin{pmatrix}
+1&2&3\
+4&5&6\
+7&8&9
+\end{pmatrix}
+]
+
+**Solution:**
+
+Use expansion:
+
+[
+\det A =1(5\cdot 9 - 6\cdot8)-2(4\cdot9-6\cdot7)+3(4\cdot8-5\cdot7)
+=1(-3) -2(-6) +3(-3)= -3+12-9=0.
+]
+
+**Answer:** (\boxed{0}) ([SATHEE][1])
+
+---
+
+# 🎲 **2. Probability**
+
+### **Q3. Two red balls from a bag**
+
+A bag contains 5 red and 3 blue balls. Two balls are drawn at random (without replacement). Find the probability both are red.
+
+**Solution:**
+
+[
+P(\text{2 red}) = \frac{\binom{5}{2}}{\binom{8}{2}}=\frac{10}{28}=\frac{5}{14}.
+]
+
+**Answer:** (\boxed{5/14}) ([SATHEE][1])
+
+---
+
+### **Q4. Sum 7 on two dice**
+
+Two fair dice are rolled. Compute (P(\text{sum}=7)).
+
+**Solution:**
+
+Total outcomes = 36; favorable = {(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)} = 6.
+
+[
+P=6/36=1/6.
+]
+
+**Answer:** (\boxed{1/6}) ([SATHEE][2])
+
+---
+
+# **3. Basic Calculus**
+
+---
+
+### **Limits**
+
+### **Q5. Evaluate**
+
+[
+\lim_{x\to 0}\frac{\sin x - x\cos x}{x^3}
+]
+
+**Solution:**
+
+Expand series:
+
+[
+\sin x=x-\tfrac{x^3}{6}+\cdots,\quad \cos x=1-\tfrac{x^2}{2}+\cdots,
+]
+[
+\sin x - x\cos x=(x-\tfrac{x^3}{6})-x(1-\tfrac{x^2}{2})=x-\tfrac{x^3}{6}-x+\tfrac{x^3}{2}=\tfrac{x^3}{3}.
+]
+Thus
+[
+\lim_{x\to0}\frac{x^3/3}{x^3}=\frac{1}{3}.
+]
+
+**Answer:** (\boxed{1/3}) ([SATHEE][3])
+
+---
+
+### **Derivatives**
+
+### **Q6. Find derivative**
+
+Differentiate (f(x)=x^3-6x^2+9x+15). Then find stationary points.
+
+**Solution:**
+
+[
+f’(x)=3x^2-12x+9.
+]
+Stationary where (f’(x)=0):
+[
+3x^2-12x+9=0\Rightarrow x^2-4x+3=0\Rightarrow(x-1)(x-3)=0.
+]
+So (x=1,3).
+
+**Answer:** (f’=3x^2-12x+9,) stationary at (x=1,3.)
+
+---
+
+### **Optimization (Max/Min)**
+
+### **Q7. Simple max/min**
+
+Find the maximum value of (f(x)=-(x-2)^2+9).
+
+**Solution:**
+
+This is an upside-down parabola with vertex at (x=2):
+
+[
+\max f(2)=-(0)^2+9=9.
+]
+
+**Answer:** (\boxed{9\text{ at }x=2})
+
+---
+
+# **4. Linear Algebra (Matrices & Systems)**
+
+---
+
+### **Q8. Solve by Cramer’s Rule**
+
+Solve:
+[
+\begin{cases}
+2x+3y=13\
+4x-y=5
+\end{cases}
+]
+
+**Solution:**
+
+[
+D=\begin{vmatrix}2&3\4&-1\end{vmatrix}=2(-1)-4(3)=-2-12=-14,
+]
+[
+D_x=\begin{vmatrix}13&3\5&-1\end{vmatrix}=13(-1)-5(3)=-13-15=-28,
+]
+[
+D_y=\begin{vmatrix}2&13\4&5\end{vmatrix}=2(5)-4(13)=10-52=-42.
+]
+So:
+[
+x=D_x/D=-28/(-14)=2,\quad y=D_y/D=-42/(-14)=3.
+]
+
+**Answer:** (\boxed{x=2,\ y=3})
+
+---
+
+### **Q9. System no solution condition**
+
+For the system
+[
+\begin{aligned}
+x+2y+3z=3,\
+2x+5y- z=1,\
+3x+7y+2z=6,
+\end{aligned}
+]
+determine if there is any solution.
+
+**Solution:** The augmented matrix determinant or elimination shows inconsistency if rank differs. After elimination, you find no consistent z satisfying all three simultaneously ⇒ **no solution**. (Practice solving via elimination or Cramer test). ([ExamSIDE][4])
+

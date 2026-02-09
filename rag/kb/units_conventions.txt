@@ -1,0 +1,21 @@
+# Units and conventions (KB)
+
+## Angles
+Calculus (derivatives, limits, integrals of sin/cos/tan): always use radians.
+Geometry/trig word problems: often degrees; convert to radians when applying calculus: θ_rad = θ_deg × π/180.
+
+## Physical quantities (when problem has units)
+Keep same units in one equation (all length in m, all time in s, etc.).
+Area: length^2 (e.g. m^2). Volume: length^3.
+Rate = quantity per time (e.g. m/s, L/min). Optimization: express quantity in one variable, then differentiate.
+
+## Probability
+Probabilities are unitless, 0 ≤ P ≤ 1. Always check P(A)+P(A')=1 when only two outcomes.
+
+## Vectors and matrices
+Vectors: same dimension for addition, dot product (same length); 3D for cross product.
+Matrix product: (m×p)(p×n) gives m×n; inner dimensions must match.
+Determinant: scalar. Inverse: same order as original matrix.
+
+## Constants
+e ≈ 2.718; π ≈ 3.14159. Use exact π or e in symbolic answers unless problem asks for decimal.

@@ -1,0 +1,8 @@
+# Solution template: Derivatives and tangent lines
+
+1. Identify f(x). Write derivative using rules: (x^n)'=nx^(n-1), (sin x)'=cos x, (cos x)'=-sin x, (e^x)'=e^x, (ln x)'=1/x. Use product rule (uv)'=u'v+uv', quotient rule (u/v)'=(u'v-uv')/v^2, chain rule (f(g))'=f'(g)·g'(x).
+2. Simplify f'(x). Factor if helpful.
+3. For "slope at x=a": compute m = f'(a).
+4. For "equation of tangent at x=a": point (a, f(a)), slope m = f'(a). Equation: y - f(a) = m(x - a). Simplify to y = mx + c if required.
+5. For "normal line": slope of normal = -1/m (m ≠ 0). Then y - f(a) = (-1/m)(x - a).
+6. State answer with "f'(x) = ..." and/or "Tangent: y = ...". Use radians for trig.

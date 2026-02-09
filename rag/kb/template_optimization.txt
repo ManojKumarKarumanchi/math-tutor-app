@@ -1,0 +1,12 @@
+# Solution template: Single-variable optimization (max/min)
+
+1. Read problem: identify quantity Q to maximize or minimize and the variable x (and any constraint linking variables).
+2. Express Q as a function of one variable: Q = f(x). Use constraint to eliminate other variables.
+3. State domain of x (e.g. x > 0, or closed interval [a,b] from problem).
+4. Find critical points: solve f'(x) = 0 (and include points where f' does not exist, if any in domain).
+5. Classify:
+   - First derivative test: check sign of f' on each side of critical point; + to - ⇒ local max, - to + ⇒ local min.
+   - Or second derivative test: f'(c)=0, f''(c)<0 ⇒ local max; f''(c)>0 ⇒ local min.
+6. If domain is closed [a,b]: evaluate f at all critical points in (a,b) and at endpoints a, b. Global max/min is the largest/smallest of these.
+7. If domain is open (e.g. x>0): use first/second derivative test and behavior as x → boundary to decide global max/min.
+8. Answer: state "Maximum/minimum value is ... at x = ..." with units if applicable.

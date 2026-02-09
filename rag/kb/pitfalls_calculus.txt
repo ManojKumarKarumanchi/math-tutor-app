@@ -1,0 +1,17 @@
+# Common mistakes & pitfalls: Calculus
+
+Limits: "lim f(x) as x→a" means x approaches a; do not substitute x=a if that gives 0/0 or undefined. Use simplification or L'Hôpital. sin(x)/x at 0 is 1 (standard limit), not 0/0 left as undefined.
+
+L'Hôpital: only for 0/0 or ∞/∞. Do not use for 0·∞, ∞-∞, 1^∞ directly; rewrite first (e.g. 0·∞ as f/(1/g) then apply).
+
+Derivative of x^n: (x^n)' = n x^(n-1). For n=0 (constant) gives 0. For negative n, same formula; ensure x≠0 where needed.
+
+Chain rule: (f(g(x)))' = f'(g(x))·g'(x). Do not forget the inner derivative g'(x). Example: (sin(x^2))' = cos(x^2)·2x.
+
+Product rule: (uv)' = u'v + uv'. Not u'v'. Quotient rule: (u/v)' = (u'v - uv')/v^2. Minus sign and v^2 in denominator.
+
+Optimization: critical points come from f'(x)=0. Also check endpoints if domain is closed. A critical point is not necessarily max or min; use first or second derivative test. f''(c)=0 does not imply no extremum; use first derivative test.
+
+Radians: derivatives of sin, cos, tan assume angle is in radians. If problem gives degrees, convert (multiply by π/180) before differentiating.
+
+Integral: ∫ x^n dx = x^(n+1)/(n+1) + C for n≠-1. For n=-1 use ln|x|+C. Do not forget +C for indefinite integrals.

@@ -1,0 +1,34 @@
+# Domain and unit constraints
+
+## When expressions are defined (real numbers)
+
+Fractions: denominator ≠ 0. Always check after solving that no root makes denominator zero; discard such roots.
+
+Square root: sqrt(x) defined for x ≥ 0. So sqrt(f(x)) requires f(x) ≥ 0.
+
+Logarithm: log_a(x) defined for x > 0, a > 0, a ≠ 1. ln x and log x require x > 0.
+
+Powers: a^b with a real: if b is not an integer, require a > 0.
+
+Tangent: tan x undefined when cos x = 0, i.e. x = π/2 + nπ (radians). Sec, cosec, cot: check where denominator (cos or sin) is zero.
+
+Inverse trig: arcsin, arccos take values in [-1,1]; range arcsin [-π/2,π/2], arccos [0,π].
+
+## Inequalities that restrict domain
+|f(x)| < g(x) implies -g(x) < f(x) < g(x); also need g(x) ≥ 0 if used in sqrt.
+log(f(x)): need f(x) > 0.
+1/f(x): need f(x) ≠ 0.
+
+## Units and conventions
+
+Calculus (limits, derivatives, integrals): use radians for angles. Derivatives of sin/cos assume radian measure.
+
+Geometry/trig problems: often degrees; convert to radians for calculus (multiply by π/180).
+
+Physical problems: state units (m, s, kg, etc.) and keep them consistent in equations.
+
+## Checklist before final answer
+- No division by zero.
+- No log of non-positive.
+- No sqrt of negative (in reals).
+- Angles in correct unit (rad vs deg) as per problem.

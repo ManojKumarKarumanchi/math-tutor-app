@@ -1,0 +1,11 @@
+# Formulas quick reference (one-pager)
+
+Algebra: (a±b)^2, a^2-b^2; quadratic x = (-b ± sqrt(b^2-4ac))/(2a); AP T_n = a+(n-1)d, S_n = n/2(2a+(n-1)d); GP T_n = ar^(n-1), S_n = a(1-r^n)/(1-r); log(xy)=log x+log y, log x^n = n log x.
+
+Probability: P(A∪B)=P(A)+P(B)-P(A∩B); P(A|B)=P(A∩B)/P(B); independent ⇔ P(A∩B)=P(A)P(B); E[X]=Σ x·P(X=x); Var(X)=E[X^2]-(E[X])^2; Binomial P(X=k)=C(n,k)p^k(1-p)^(n-k), E=np, Var=np(1-p).
+
+Calculus: lim sin x/x = 1; (x^n)'=nx^(n-1); (sin x)'=cos x, (cos x)'=-sin x; (uv)'=u'v+uv'; chain (f(g))'=f'(g)g'; L'Hôpital for 0/0, ∞/∞. Critical points: f'(x)=0; f''(c)<0 ⇒ max, f''(c)>0 ⇒ min.
+
+Linear algebra: a·b = |a||b|cos θ; a×b magnitude = |a||b|sin θ; 2×2 det = ad-bc; A^(-1) = (1/(ad-bc))[d -b;-c a].
+
+See algebra.txt, probability.txt, calculus.txt, linear_algebra.txt for full lists.
