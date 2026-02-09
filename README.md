@@ -1,3 +1,15 @@
+---
+title: Math Mentor AI
+emoji: 🧮
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: "1.39.0"
+python_version: "3.13"
+app_file: main.py
+pinned: false
+---
+
 # Math Mentor AI
 
 Multimodal AI math tutor: RAG, multi-agent system, human-in-the-loop (HITL), and memory. Solves JEE-level math from text, images, or audio with step-by-step explanations and continuous learning.
