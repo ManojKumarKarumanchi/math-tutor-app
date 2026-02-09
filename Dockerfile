@@ -9,9 +9,15 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
-COPY src/ ./src/
 
 RUN pip3 install -r requirements.txt
+
+COPY rag/ ./rag/
+COPY config/ ./config/
+COPY main.py ./main.py
+COPY rules/ ./rules/
+
+RUN python rag/index_kb.py
 
 EXPOSE 8501
 
