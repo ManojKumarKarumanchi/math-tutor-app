@@ -203,4 +203,10 @@ Use **Correct** / **Incorrect** (and optional comment) after each solution so th
 
 ## License
 
-See repository.
+This project is licensed under the MIT License.
+
+## Link 
+
+Demo Video : demo.mp4
+
+Link: https://huggingface.co/spaces/Rider786/Math-Tutor

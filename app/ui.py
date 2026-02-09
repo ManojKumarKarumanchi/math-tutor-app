@@ -1323,10 +1323,15 @@ def orchestrate(
                         or "Failed to call a function" in error_msg
                     ):
                         st.info(
-                            "💡 The solver encountered an issue with tool calling. This may be due to:\n"
-                            "- Groq API limitations\n"
-                            "- Ensure you have GEMINI_API_KEY set for fallback\n"
-                            "- Try rephrasing your question more simply"
+                            "💡 **Tool Calling Issue Detected**\n\n"
+                            "The model had trouble using mathematical tools. This can happen with:\n"
+                            "- Some Groq models that have tool calling limitations\n"
+                            "- Complex expressions that confuse the model\n\n"
+                            "**Try these solutions:**\n"
+                            "1. Switch to a Gemini model (Gemini models have better tool calling support)\n"
+                            "2. Rephrase your question more simply\n"
+                            "3. Break complex problems into smaller parts\n"
+                            "4. Ensure you have GEMINI_API_KEY set for better fallback support"
                         )
                     return
                 else:

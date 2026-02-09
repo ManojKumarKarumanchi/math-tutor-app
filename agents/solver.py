@@ -255,7 +255,9 @@ Problem: {problem_text}
             model=model_obj,
             tools=ALL_TOOLS,
             markdown=True,
-            instructions="""You are a math solver. You MUST use the provided tools when performing mathematical operations:
+            instructions="""You are a math solver. You MUST use the provided tools when performing mathematical operations.
+
+**CRITICAL: Use structured tool calls only. DO NOT write function calls as text like <function=...> or [function(...)]. The system will automatically call tools when you use them properly.**
 
 **Mathematical Tools:**
 - differentiate(expression, variable): Compute derivatives
@@ -277,7 +279,8 @@ Problem: {problem_text}
 - Use search_web_tool if you need additional context or examples from the web
 - Use search_wikipedia_tool if you need authoritative definitions, theorems, or mathematical concepts
 - Show your work step by step, calling tools and explaining results
-- Provide a complete solution with final answer""",
+- Provide a complete solution with final answer
+- Write your solution naturally - the tools will be called automatically when you reference them""",
         )
 
         response = agent.run(prompt)
@@ -296,23 +299,64 @@ Problem: {problem_text}
                     model=model_obj,
                     tools=TOOLS,  # Only math tools, no web search
                     markdown=True,
-                    instructions="""You are a math solver. Use the provided mathematical tools when needed:
-                    - differentiate(expression, variable): For derivatives
-                    - integrate_expr(expression, variable): For integrals
-                    - solve_equation(equation, variable): For solving equations
-                    - calculate(expression): For numerical evaluation
-                    - simplify_expr(expression): For simplification
+                    instructions="""You are a math solver. Use the provided mathematical tools when needed.
 
-                    Show your work step by step, calling tools and explaining results.""",
+**CRITICAL: Use structured tool calls only. DO NOT write function calls as text. The system will automatically call tools when you use them properly.**
+
+Available tools:
+- differentiate(expression, variable): For derivatives
+- integrate_expr(expression, variable): For integrals
+- solve_equation(equation, variable): For solving equations
+- calculate(expression): For numerical evaluation
+- simplify_expr(expression): For simplification
+
+Show your work step by step. Write your solution naturally - tools will be called automatically when needed.""",
                 )
                 response = agent_math_only.run(prompt)
                 print("✅ Solved with math tools only (fallback mode)")
             except Exception as fallback_error:
-                error_msg = str(fallback_error)
-                if (
-                    "rate_limit" in error_msg.lower()
-                    or "429" in error_msg
-                    or "quota" in error_msg.lower()
+                error_msg_fallback = str(fallback_error)
+                # If tool calling still fails, try without tools as last resort
+                if "tool_use_failed" in error_msg_fallback or "Failed to call a function" in error_msg_fallback:
+                    print(f"⚠️ Tool calling still failing, trying without tools...")
+                    try:
+                        agent_no_tools = Agent(
+                            name="Math Solver",
+                            model=model_obj,
+                            tools=[],  # No tools - solve directly
+                            markdown=True,
+                            instructions="""You are a math solver. Solve the problem step by step using mathematical reasoning.
+
+Since tool calling is not available, solve the problem directly using your mathematical knowledge.
+Show all steps clearly and provide the final answer.""",
+                        )
+                        response = agent_no_tools.run(prompt)
+                        print("✅ Solved without tools (last resort mode)")
+                    except Exception as no_tools_error:
+                        error_msg = str(no_tools_error)
+                        if (
+                            "rate_limit" in error_msg.lower()
+                            or "429" in error_msg
+                            or "quota" in error_msg.lower()
+                        ):
+                            return {
+                                "error": {
+                                    "message": "Rate limit exceeded. Please try again in a few moments.",
+                                    "type": "rate_limit",
+                                }
+                            }, []
+                        else:
+                            print(f"❌ Solver error (all modes failed): {no_tools_error}")
+                            return {
+                                "error": {
+                                    "message": f"Unable to solve: {str(no_tools_error)}. Please try a different model or rephrase your question.",
+                                    "type": "solver_error",
+                                }
+                            }, []
+                elif (
+                    "rate_limit" in error_msg_fallback.lower()
+                    or "429" in error_msg_fallback
+                    or "quota" in error_msg_fallback.lower()
                 ):
                     return {
                         "error": {
