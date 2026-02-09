@@ -263,9 +263,6 @@ def app_main():
         st.subheader("📊 Memory Stats")
         stats = memory.get_stats()
         st.metric("Total Problems", stats["total"])
-        col1, col2 = st.columns(2)
-        col1.metric("👍 Positive", stats["positive_feedback"])
-        col2.metric("👎 Negative", stats["negative_feedback"])
 
     # ========== PENDING CLARIFICATION: run orchestration immediately after Submit Clarification ==========
     # This runs first so we don't depend on the form or submit button block (which can fail to trigger).
