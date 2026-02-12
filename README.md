@@ -10,7 +10,7 @@ app_file: main.py
 pinned: false
 ---
 
-# Math Mentor AI
+# Math Mentor AI  --> https://deepwiki.com/ManojKumarKarumanchi/math-tutor-app
 
 Multimodal AI math tutor: RAG, multi-agent system, human-in-the-loop (HITL), and memory. Solves JEE-level math from text, images, or audio with step-by-step explanations and continuous learning.
 
